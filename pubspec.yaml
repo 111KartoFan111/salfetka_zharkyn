@@ -1,0 +1,42 @@
+name: soulmatch
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Иконки (эквивалент lucide-react)
+  lucide_icons_flutter: ^0.0.1+1 
+  
+  # Для отображения SVG
+  flutter_svg: ^2.0.9
+
+  # Для анимаций (эквивалент motion/react)
+  flutter_animate: ^4.5.0
+
+  # Для управления состоянием (простой эквивалент React State/Context)
+  provider: ^6.1.1
+
+  # Для свайпа карточек
+  flutter_card_swiper: ^7.0.0
+
+  # Для постраничного просмотра (как в Onboarding)
+  smooth_page_indicator: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Добавляем ассеты (логотип)
+  assets:
+    - assets/logo/
