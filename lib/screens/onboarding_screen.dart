@@ -17,25 +17,24 @@ class OnboardingScreen extends StatefulWidget {
 class _OnboardingScreenState extends State<OnboardingScreen> {
   final _controller = PageController();
   int _currentSlide = 0;
-
   final slides = [
     {
       'icon': const NeuralLogoWidget(size: 80),
-      'title': 'Welcome to SoulMatch',
+      'title': 'Добро пожаловать в SoulMatch',
       'description':
-          'AI-powered matchmaking that understands your personality, interests, and communication style to find your perfect match.',
+          'ИИ-система поиска пары, которая понимает вашу личность, интересы и стиль общения, чтобы найти идеальную пару.',
     },
     {
       'icon': const Icon(LucideIcons.sparkles, size: 60, color: AppTheme.gradientPurple),
-      'title': 'Smart AI Matching',
+      'title': 'Умный ИИ-подбор',
       'description':
-          'Our advanced AI analyzes compatibility across multiple dimensions to suggest partners who truly resonate with you.',
+          'Наш продвинутый ИИ анализирует совместимость по множеству параметров, чтобы предложить партнеров, которые действительно вам подходят.',
     },
     {
       'icon': const Icon(LucideIcons.calendar, size: 60, color: AppTheme.gradientPink),
-      'title': 'Personalized Date Ideas',
+      'title': 'Персональные идеи для свиданий',
       'description':
-          'Get AI-generated date suggestions tailored to you and your match. Earn achievements as you explore together!',
+          'Получайте предложения для свиданий, созданные ИИ специально для вас и вашей пары. Зарабатывайте достижения во время совместных приключений!',
     },
   ];
 
@@ -162,8 +161,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     ),
                     child: Text(
                       _currentSlide == slides.length - 1
-                          ? 'Get Started'
-                          : 'Next',
+                          ? 'Начать'
+                          : 'Далее',
                     ),
                   ),
                 ),

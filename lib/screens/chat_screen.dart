@@ -21,11 +21,12 @@ class _ChatScreenState extends State<ChatScreen> {
 
   // Мок-данные сообщений
   final List<Map<String, String>> messages = [
-    {'id': '1', 'text': "Hey! I saw you're into art galleries too 🎨", 'sender': 'them', 'time': '2:30 PM'},
-    {'id': '2', 'text': "Yes! I love contemporary art. Have you been to the MoMA?", 'sender': 'me', 'time': '2:32 PM'},
-    {'id': '3', 'text': "I have! It's amazing. We should check out the new exhibition sometime", 'sender': 'them', 'time': '2:35 PM'},
-    {'id': '4', 'text': "That would be great! I'd love to", 'sender': 'me', 'time': '2:36 PM'},
+    {'id': '1', 'text': "Привет! Я заметил(а), что ты тоже любишь художественные галереи 🎨", 'sender': 'them', 'time': '14:30'},
+    {'id': '2', 'text': "Да! Я обожаю современное искусство. Ты был(а) в MoMA?", 'sender': 'me', 'time': '14:32'},
+    {'id': '3', 'text': "Был(а)! Это потрясающе. Нам стоит сходить на новую выставку как-нибудь", 'sender': 'them', 'time': '14:35'},
+    {'id': '4', 'text': "Звучит здорово! С удовольствием пойду", 'sender': 'me', 'time': '14:36'},
   ];
+
 
   void _showAIPopup() {
     showDialog(
@@ -195,10 +196,16 @@ class _ChatScreenState extends State<ChatScreen> {
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('AI has a date idea for you!', style: Theme.of(context).textTheme.bodyMedium),
-                    Text('Tap to see suggestion', style: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppTheme.mutedForeground)),
-                  ],
+                    children: [
+                      Text(
+                        'ИИ придумал идею для свидания!',
+                        style: Theme.of(context).textTheme.bodyMedium,
+                      ),
+                      Text(
+                        'Нажмите, чтобы увидеть предложение',
+                        style: Theme.of(context).textTheme.bodySmall?.copyWith(color: AppTheme.mutedForeground),
+                      ),
+                    ],
                 ),
               ),
             ],
@@ -263,7 +270,7 @@ class _ChatScreenState extends State<ChatScreen> {
             child: TextField(
               controller: _messageController,
               decoration: InputDecoration(
-                hintText: 'Type a message...',
+                hintText: 'Введите сообщение...',
                 contentPadding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16), // h-12 px-6
                 // Убираем border из темы, используем fillColor
                 border: InputBorder.none,

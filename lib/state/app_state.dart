@@ -53,30 +53,60 @@ class AppState extends ChangeNotifier {
   UserProfile? _selectedProfile;
   UserProfile? get selectedProfile => _selectedProfile;
 
-  // Мок-данные для профилей
+// Мок-данные для профилей (казахстанская локализация)
   final List<UserProfile> mockProfiles = [
     UserProfile(
       id: '1',
-      name: 'Emma',
-      age: 26,
+      name: 'Айгерим',
+      age: 25,
       image: 'https://images.unsplash.com/photo-1675705445381-db30ca7834de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHlvdW5nJTIwd29tYW58ZW58MXx8fHwxNzYxMDgwMTgyfDA&ixlib=rb-4.1.0&q=80&w=1080',
-      location: 'New York',
-      occupation: 'Designer',
-      bio: 'Love art galleries and weekend coffee adventures ☕🎨',
+      location: 'Астана',
+      occupation: 'Дизайнер',
+      bio: 'Люблю арт-галереи и утренний кофе ☕🎨 Обожаю уютные места и красивые детали.',
       compatibility: 92,
     ),
     UserProfile(
       id: '2',
-      name: 'Alex',
+      name: 'Ернар',
       age: 28,
       image: 'https://images.unsplash.com/photo-1596690097396-bb75a1d6c807?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHlvdW5nJTIwbWFufGVufDF8fHx8MTc2MTEyMjkwNXww&ixlib=rb-4.1.0&q=80&w=1080',
-      location: 'Brooklyn',
-      occupation: 'Software Engineer',
-      bio: 'Tech enthusiast, hiking lover, and amateur chef 🏔️👨‍🍳',
+      location: 'Алматы',
+      occupation: 'Разработчик ПО',
+      bio: 'Фанат технологий 💻, люблю горы и готовить что-то новое 🏔️👨‍🍳',
       compatibility: 88,
     ),
-    // ... (добавь остальные профили)
+    UserProfile(
+      id: '3',
+      name: 'Аружан',
+      age: 27,
+      image: 'https://images.unsplash.com/photo-1614289371518-955b6a3ecdb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+      location: 'Шымкент',
+      occupation: 'Маркетолог',
+      bio: 'Открыта для нового ✨ Люблю путешествия и живую музыку 🎶',
+      compatibility: 85,
+    ),
+    UserProfile(
+      id: '4',
+      name: 'Даурен',
+      age: 30,
+      image: 'https://images.unsplash.com/photo-1603415526960-f7e0328f9a48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+      location: 'Караганда',
+      occupation: 'Архитектор',
+      bio: 'Ценю гармонию в жизни, интересуюсь урбанистикой и фотографией 📸🏙️',
+      compatibility: 83,
+    ),
+    UserProfile(
+      id: '5',
+      name: 'Мадина',
+      age: 24,
+      image: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+      location: 'Актобе',
+      occupation: 'Учитель английского',
+      bio: 'Обожаю книги, уютные вечера и добрых людей 📚☕',
+      compatibility: 89,
+    ),
   ];
+
 
   // --- Методы для изменения состояния ---
 

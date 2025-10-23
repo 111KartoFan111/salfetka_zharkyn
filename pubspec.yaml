@@ -12,7 +12,8 @@ dependencies:
     sdk: flutter
 
   # Иконки (эквивалент lucide-react)
-  lucide_icons_flutter: ^0.0.1+1 
+  lucide_icons_flutter: ^3.1.5
+
   
   # Для отображения SVG
   flutter_svg: ^2.0.9
@@ -28,6 +29,9 @@ dependencies:
 
   # Для постраничного просмотра (как в Onboarding)
   smooth_page_indicator: ^1.1.0
+  firebase_core: ^3.4.0
+  firebase_auth: ^5.2.0
+  cloud_firestore: ^5.3.0
 
 dev_dependencies:
   flutter_test:

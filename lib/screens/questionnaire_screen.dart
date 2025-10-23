@@ -104,28 +104,28 @@ class _QuestionnaireScreenState extends State<QuestionnaireScreen> {
                   },
                   children: [
                     _buildStep(
-                      title: 'Upload Your Photos',
-                      subtitle: 'Add at least 3 photos',
+                      title: 'Загрузите свои фотографии',
+                      subtitle: 'Добавьте как минимум 3 фото',
                       content: _buildPhotoGrid(),
                     ),
                     _buildStep(
-                      title: 'About You',
-                      subtitle: 'Tell us a bit about yourself',
+                      title: 'О себе',
+                      subtitle: 'Расскажите немного о себе',
                       content: _buildAboutForm(),
                     ),
                     _buildStep(
-                      title: 'Your Interests',
-                      subtitle: 'Select what you love',
+                      title: 'Ваши интересы',
+                      subtitle: 'Выберите то, что вам нравится',
                       content: _buildInterestsGrid(),
                     ),
                     _buildStep(
-                      title: 'Relationship Goals',
-                      subtitle: 'What are you looking for?',
+                      title: 'Цели в отношениях',
+                      subtitle: 'Что вы ищете?',
                       content: _buildGoalsList(),
                     ),
                     _buildStep(
-                      title: 'Personality Type',
-                      subtitle: 'How would you describe yourself?',
+                      title: 'Тип личности',
+                      subtitle: 'Как бы вы себя описали?',
                       content: _buildPersonalityList(),
                     ),
                   ],
@@ -217,7 +217,7 @@ class _QuestionnaireScreenState extends State<QuestionnaireScreen> {
       children: [
         TextField(
           decoration: InputDecoration(
-            hintText: 'Your name',
+            hintText: 'Ваше имя',
             fillColor: AppTheme.background,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(16),
@@ -228,7 +228,7 @@ class _QuestionnaireScreenState extends State<QuestionnaireScreen> {
         const SizedBox(height: 16),
         TextField(
           decoration: InputDecoration(
-            hintText: 'Your age',
+            hintText: 'Ваш возраст',
             fillColor: AppTheme.background,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(16),
@@ -240,7 +240,7 @@ class _QuestionnaireScreenState extends State<QuestionnaireScreen> {
         const SizedBox(height: 16),
         TextField(
           decoration: InputDecoration(
-            hintText: 'Write a short bio about yourself...',
+            hintText: 'Расскажите немного о себе...',
             fillColor: AppTheme.background,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(16),
@@ -256,9 +256,9 @@ class _QuestionnaireScreenState extends State<QuestionnaireScreen> {
 
   Widget _buildInterestsGrid() {
     const interests = [
-      '🎭 Theater', '☕ Coffee', '🏃 Sports', '🎨 Art', '📚 Reading',
-      '🎵 Music', '🍕 Foodie', '✈️ Travel', '🎮 Gaming', '🧘 Yoga',
-      '🎬 Movies', '🌿 Nature',
+      '🎭 Театр' , '☕ Кофе' , '🏃 Спорт' , '🎨 Искусство',
+      '📚 Чтение' , '🎵 Музыка' , '🍕 Еда' , '✈️ Путешествия',
+      '🎮 Игры' , '🧘 Йога' , '🎬 Кино' , '🌿 Природа',
     ];
     return Wrap(
       spacing: 8,
@@ -280,7 +280,12 @@ class _QuestionnaireScreenState extends State<QuestionnaireScreen> {
   }
   
   Widget _buildGoalsList() {
-    const goals = ['Long-term relationship', 'Short-term fun', 'New friends', 'Not sure yet'];
+    const goals = [
+      'Ищу что-то настоящее ❤️',
+      'Весело провести время 😜',
+      'Познакомиться с новыми людьми 👋',
+      'Сам(а) ещё не понял(а) 🤔',
+    ];
     return ListView.separated(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
@@ -302,12 +307,12 @@ class _QuestionnaireScreenState extends State<QuestionnaireScreen> {
 
   Widget _buildPersonalityList() {
     const types = [
-      {'label': 'Introvert', 'emoji': '🤫'},
-      {'label': 'Extrovert', 'emoji': '🎉'},
-      {'label': 'Ambivert', 'emoji': '🎭'},
-      {'label': 'Creative', 'emoji': '🎨'},
-      {'label': 'Analytical', 'emoji': '🧠'},
-      {'label': 'Adventurous', 'emoji': '🗺️'},
+      {'label': 'Интроверт', 'emoji': '🤫'},
+      {'label': 'Экстраверт', 'emoji': '🎉'},
+      {'label': 'Амбиверт', 'emoji': '🎭'},
+      {'label': 'Креативный', 'emoji': '🎨'},
+      {'label': 'Аналитичный', 'emoji': '🧠'},
+      {'label': 'Авантюрный', 'emoji': '🗺️'},
     ];
     return ListView.separated(
       shrinkWrap: true,

@@ -46,10 +46,10 @@ class AIDatePopup extends StatelessWidget {
               child: const Icon(LucideIcons.sparkles, size: 32, color: Colors.white),
             ),
             // Контент
-            Text('AI Suggests', style: textTheme.headlineMedium),
+            Text('Совет от ИИ', style: textTheme.headlineMedium),
             const SizedBox(height: 8),
             Text(
-              'Based on your shared interests and compatibility:',
+              'Подобрано с учётом ваших интересов и совместимости:',
               style: textTheme.bodyMedium?.copyWith(color: AppTheme.mutedForeground),
               textAlign: TextAlign.center,
             ),
@@ -69,19 +69,18 @@ class AIDatePopup extends StatelessWidget {
                     children: [
                       Text('🎭', style: TextStyle(fontSize: 30)),
                       SizedBox(width: 8),
-                      Text('Go to the theater', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)), // h4 equivalent
+                      Text('Сходить в театр', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)), // h4 equivalent
                     ],
                   ),
                   const SizedBox(height: 8),
                   Row( // Обертка для центрирования
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                       Text('Earn the ', style: textTheme.bodyMedium?.copyWith(color: AppTheme.mutedForeground)),
+                       Text('Заработайте достижение', style: textTheme.bodyMedium?.copyWith(color: AppTheme.mutedForeground)),
                        ShaderMask(
                          shaderCallback: (bounds) => AppTheme.primaryGradient.createShader(bounds),
-                         child: const Text('Literary Route', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+                         child: const Text('Литературный маршрут', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                        ),
-                       Text(' achievement', style: textTheme.bodyMedium?.copyWith(color: AppTheme.mutedForeground)),
                     ],
                   )
                 ],
@@ -89,14 +88,15 @@ class AIDatePopup extends StatelessWidget {
             ),
              const SizedBox(height: 24),
             // Детали
-            _buildDateDetail('Catch a Broadway show this weekend'),
-            _buildDateDetail('Dinner at a nearby restaurant afterward'),
-            _buildDateDetail('Perfect for deep conversations'),
+            _buildDateDetail('Сходить на спектакль в эти выходные'),
+            _buildDateDetail('Ужин в уютном ресторане после шоу'),
+            _buildDateDetail('Идеально для душевных разговоров'),
+
             const SizedBox(height: 24),
             // Кнопки
             GradientButton(
               onPressed: onAccept,
-              label: 'Accept & Send',
+              label: 'Принять и отправить',
               height: 48, // h-12
               width: double.infinity,
             ),
@@ -108,7 +108,7 @@ class AIDatePopup extends StatelessWidget {
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
                 side: BorderSide(color: Colors.grey[300]!),
               ),
-              child: const Text('Maybe Later'),
+              child: const Text('Возможно позже'),
             ),
           ],
         ),

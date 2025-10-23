@@ -33,9 +33,7 @@ class _SwipeScreenState extends State<SwipeScreen> {
       _currentIndex = currentIndex ?? 0;
     });
     
-    // Если свайпнули вправо (like) и это был профиль Эммы (для демо),
-    // то вызываем onProfileClick
-    if (direction == CardSwiperDirection.right && _profiles[previousIndex].name == 'Emma') {
+    if (direction == CardSwiperDirection.right && _profiles[previousIndex].name == 'Мариям') {
       widget.onProfileClick(_profiles[previousIndex]);
     }
     
@@ -152,7 +150,7 @@ class _SwipeScreenState extends State<SwipeScreen> {
           const NeuralLogoWidget(size: 60),
           const SizedBox(height: 16),
           Text(
-            'No more profiles',
+            'У вас пока нет новых совпадений',
             style: Theme.of(context)
                 .textTheme
                 .headlineMedium
@@ -160,7 +158,7 @@ class _SwipeScreenState extends State<SwipeScreen> {
           ),
           const SizedBox(height: 8),
           Text(
-            'Check back later for new matches!',
+            'Зайдите позже, чтобы увидеть новых людей',
             style: Theme.of(context)
                 .textTheme
                 .bodyMedium

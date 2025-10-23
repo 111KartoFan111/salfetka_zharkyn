@@ -19,7 +19,7 @@ class MatchesScreen extends StatelessWidget {
     // TODO: Добавить реальные данные для matches, включая newMatch
     final demoMatches = matches.map((p) => {
       'profile': p,
-      'newMatch': p.name == 'Emma' || p.name == 'Ryan', // Пример
+      'newMatch': p.name == 'Мариям' || p.name == 'Нурдаулет', 
     }).toList();
 
 
@@ -47,7 +47,7 @@ class MatchesScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              // Сетка мэтчей
+              // Сетка матчей
               Expanded(
                 child: GridView.builder(
                   padding: const EdgeInsets.fromLTRB(24.0, 0, 24.0, 90.0), // Отступ снизу для навигации
@@ -158,7 +158,7 @@ class MatchesScreen extends StatelessWidget {
                   OutlinedButton.icon(
                     onPressed: () => onMatchClick(profile), // Может, сразу в чат?
                     icon: const Icon(LucideIcons.messageCircle, size: 16, color: Colors.white),
-                    label: const Text('Message', style: TextStyle(color: Colors.white, fontSize: 14)),
+                    label: const Text('Сообщение', style: TextStyle(color: Colors.white, fontSize: 14)),
                     style: OutlinedButton.styleFrom(
                       backgroundColor: Colors.white.withOpacity(0.2),
                       side: BorderSide(color: Colors.white.withOpacity(0.3)),

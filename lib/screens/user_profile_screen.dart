@@ -17,7 +17,9 @@ class UserProfileScreen extends StatelessWidget {
       {'icon': LucideIcons.star, 'label': 'Super Likes', 'value': '8'},
       {'icon': LucideIcons.messageCircle, 'label': 'Chats', 'value': '12'},
     ];
-    const interests = ['🎭 Theater', '☕ Coffee', '📚 Reading', '🎵 Music', '✈️ Travel', '🎨 Art'];
+    const interests = [
+      '🎭 Театр', '☕ Кофе', '📚 Чтение', '🎵 Музыка', '✈️ Путешествия', '🎨 Искусство',
+    ];
     const achievementsPreview = ['🎭', '☕', '🏃'];
 
 
@@ -57,17 +59,27 @@ class UserProfileScreen extends StatelessWidget {
                     _buildAchievementsPreview(context, achievementsPreview),
                     const SizedBox(height: 24),
                     // About
-                    _buildInfoCard(context, title: 'About Me', content: 'Tech enthusiast who loves exploring the city, trying new restaurants, and catching live music. Always up for an adventure!'),
+                    _buildInfoCard(
+                      context,
+                      title: 'Обо мне',
+                      content: 'Люблю технологии, исследовать город, пробовать новые рестораны и ходить на живые концерты. Всегда готов(а) к приключениям!',
+                    ),
+
                     const SizedBox(height: 24),
                     // Interests
                     _buildInterestsCard(context, interests),
                      const SizedBox(height: 24),
                     // Looking For
-                    _buildInfoCard(context, title: 'Looking For', content: 'Long-term relationship'),
+                    _buildInfoCard(
+                      context,
+                      title: 'Ищу',
+                      content: 'Серьёзные отношения',
+                    ),
+
                     const SizedBox(height: 24),
                     // Кнопка Edit
                     GradientButton(
-                      label: 'Edit Profile',
+                      label: 'Редактировать профиль',
                       onPressed: () {},
                       height: 56, // h-14
                     ),
@@ -122,9 +134,9 @@ class UserProfileScreen extends StatelessWidget {
               child: Column(
                  crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('John, 27', style: textTheme.displayMedium?.copyWith(color: Colors.white)),
+                  Text('Нурдаулет, 18', style: textTheme.displayMedium?.copyWith(color: Colors.white)),
                   const SizedBox(height: 4),
-                  Text('Software Engineer · New York', style: textTheme.bodyMedium?.copyWith(color: Colors.white70)),
+                  Text('Software Engineer · Астана', style: textTheme.bodyMedium?.copyWith(color: Colors.white70)),
                 ],
               ),
             ),
@@ -207,7 +219,7 @@ class UserProfileScreen extends StatelessWidget {
                   children: [
                     const Icon(LucideIcons.trophy, size: 20, color: AppTheme.gradientPurple),
                     const SizedBox(width: 8),
-                    Text('Achievements', style: textTheme.headlineSmall),
+                    Text('Архив', style: textTheme.headlineSmall),
                   ],
                 ),
                 TextButton(
@@ -286,7 +298,7 @@ class UserProfileScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-             Text('Interests', style: textTheme.headlineSmall),
+             Text('Интересы', style: textTheme.headlineSmall),
              const SizedBox(height: 12),
              Wrap(
               spacing: 8,

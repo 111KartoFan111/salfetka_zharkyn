@@ -15,33 +15,33 @@ class RecommendationsScreen extends StatelessWidget {
   final List<Map<String, dynamic>> topMatches = const [
     {
       'id': '1',
-      'name': 'Emma',
-      'age': 26,
+      'name': 'Айгерим',
+      'age': 25,
       'image': 'https://images.unsplash.com/photo-1675705445381-db30ca7834de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHlvdW5nJTIwd29tYW58ZW58MXx8fHwxNzYxMDgwMTgyfDA&ixlib=rb-4.1.0&q=80&w=1080',
-      'location': 'New York',
+      'location': 'Астана',
       'compatibility': 92,
-      'dateIdea': '🎨 Visit a contemporary art gallery',
-      'reason': 'You both love art and creative expression',
+      'dateIdea': '🎨 Сходить в арт-галерею или музей современного искусства',
+      'reason': 'Вы оба любите искусство и творческую атмосферу',
     },
     {
       'id': '2',
-      'name': 'Ryan',
-      'age': 29,
+      'name': 'Ернар',
+      'age': 28,
       'image': 'https://images.unsplash.com/photo-1656582117510-3a177bf866c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMHBlcnNvbiUyMHBvcnRyYWl0fGVufDF8fHx8MTc2MTA3NzYwNnww&ixlib=rb-4.1.0&q=80&w=1080',
-      'location': 'Queens',
+      'location': 'Алматы',
       'compatibility': 90,
-      'dateIdea': '📸 Photography walk in Central Park',
-      'reason': 'Shared interest in photography and nature',
+      'dateIdea': '📸 Прогулка с фотоаппаратом по городу и кофе в уютном кафе',
+      'reason': 'Оба любите фотографию и уютные места',
     },
     {
       'id': '3',
-      'name': 'Alex',
-      'age': 28,
+      'name': 'Аружан',
+      'age': 27,
       'image': 'https://images.unsplash.com/photo-1596690097396-bb75a1d6c807?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHlvdW5nJTIwbWFufGVufDF8fHx8MTc2MTEyMjkwNXww&ixlib=rb-4.1.0&q=80&w=1080',
-      'location': 'Brooklyn',
+      'location': 'Шымкент',
       'compatibility': 88,
-      'dateIdea': '🍳 Cooking class and dinner',
-      'reason': 'Both passionate about food and cooking',
+      'dateIdea': '🍳 Кулинарный мастер-класс и ужин вдвоём',
+      'reason': 'Вы оба обожаете готовить и пробовать новое',
     },
   ];
 
@@ -79,7 +79,7 @@ class RecommendationsScreen extends StatelessWidget {
                           shaderCallback: (bounds) =>
                               AppTheme.primaryGradient.createShader(bounds),
                           child: Text(
-                            'AI Recommendations',
+                            'AI рекомендации',
                             style: textTheme.displayMedium
                                 ?.copyWith(color: Colors.white),
                           ),
@@ -88,7 +88,7 @@ class RecommendationsScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      'Your top matches for today',
+                      '${matchProfiles.length} новых предложений для вас',
                       style: textTheme.bodyLarge
                           ?.copyWith(color: AppTheme.mutedForeground),
                     ),
@@ -269,7 +269,7 @@ class RecommendationsScreen extends StatelessWidget {
                     Expanded(
                       child: GradientButton( // Используем кастомную кнопку
                         onPressed: () => onProfileClick(profile),
-                        label: 'View Profile',
+                        label: 'Посмотреть профиль',
                         icon: LucideIcons.messageCircle,
                         height: 44, // h-11
                       ),
@@ -290,12 +290,12 @@ class RecommendationsScreen extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            "That's all for today!",
+            "На сегодня всё!",
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: AppTheme.mutedForeground),
           ),
           const SizedBox(height: 8),
           Text(
-            "Check back tomorrow for fresh recommendations",
+            "Зайдите завтра, чтобы увидеть новые совпадения",
             style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.grey[400]),
           ),
         ],

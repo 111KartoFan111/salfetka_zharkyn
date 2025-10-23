@@ -70,23 +70,23 @@ class AppBottomNavigation extends StatelessWidget {
         showUnselectedLabels: false,
         items: [
           _buildNavItem(
-            icon: LucideIcons.home,
-            label: 'Home',
+            icon: LucideIcons.house,
+            label: 'Главная',
             isActive: currentTab == AppScreen.home,
           ),
           _buildNavItem(
             icon: LucideIcons.heart,
-            label: 'Matches',
+            label: 'Совпадения',
             isActive: currentTab == AppScreen.matches,
           ),
           _buildNavItem(
             icon: LucideIcons.messageCircle,
-            label: 'Chats',
+            label: 'Чаты',
             isActive: currentTab == AppScreen.chats,
           ),
           _buildNavItem(
             icon: LucideIcons.user,
-            label: 'Profile',
+            label: 'Профиль',
             isActive: currentTab == AppScreen.profile,
           ),
         ],

@@ -21,7 +21,7 @@ class ProfileDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
-    const interests = ['🎭 Theater', '☕ Coffee', '📚 Reading', '🎵 Music', '✈️ Travel']; // Мок-данные
+    const interests = ['🎭 Театр', '☕ Кофе', '📚 Чтение', '🎵 Музыка', '✈️ Путешествие']; // Мок-данные
 
     return Scaffold(
       body: Stack(
@@ -110,11 +110,11 @@ class ProfileDetailScreen extends StatelessWidget {
                   padding: const EdgeInsets.fromLTRB(24.0, 24.0, 24.0, 100.0), // Отступ для кнопок внизу
                   sliver: SliverList(
                     delegate: SliverChildListDelegate([
-                      _buildSection(context, title: 'About', child: Text(profile.bio, style: textTheme.bodyMedium?.copyWith(color: AppTheme.mutedForeground))),
+                      _buildSection(context, title: 'Обо мне', child: Text(profile.bio, style: textTheme.bodyMedium?.copyWith(color: AppTheme.mutedForeground))),
                       const SizedBox(height: 24),
-                      _buildSection(context, title: 'Interests', child: _buildInterestsWrap(context, interests)),
+                      _buildSection(context, title: 'Интересы', child: _buildInterestsWrap(context, interests)),
                        const SizedBox(height: 24),
-                      _buildSection(context, title: 'Compatibility Breakdown', child: _buildCompatibilityBars(context)),
+                      _buildSection(context, title: 'Совместимость', child: _buildCompatibilityBars(context)),
                       const SizedBox(height: 24),
                       _buildAIDateSuggestion(context),
                     ]),
@@ -156,7 +156,7 @@ class ProfileDetailScreen extends StatelessWidget {
                     child: OutlinedButton.icon(
                       onPressed: () { /* Handle Like */ },
                       icon: const Icon(LucideIcons.heart, size: 20, color: AppTheme.gradientPink),
-                      label: const Text('Like'),
+                      label: const Text('Понравилось'),
                       style: OutlinedButton.styleFrom(
                         minimumSize: const Size(0, 56), // h-14
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
@@ -168,7 +168,7 @@ class ProfileDetailScreen extends StatelessWidget {
                   Expanded(
                     child: GradientButton(
                       onPressed: onMessage,
-                      label: 'Message',
+                      label: 'Сообщение',
                       icon: LucideIcons.messageCircle,
                       height: 56, // h-14
                     ),
@@ -213,10 +213,10 @@ class ProfileDetailScreen extends StatelessWidget {
 
   Widget _buildCompatibilityBars(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
-     final items = [
-      {'label': 'Interests', 'value': 95, 'color1': AppTheme.gradientPink, 'color2': AppTheme.gradientPink.withAlpha(200)},
-      {'label': 'Communication Style', 'value': 92, 'color1': AppTheme.gradientPink.withAlpha(200), 'color2': AppTheme.gradientPurple.withAlpha(200)},
-      {'label': 'Life Goals', 'value': 88, 'color1': AppTheme.gradientPurple.withAlpha(200), 'color2': AppTheme.gradientPurple},
+    final items = [
+      {'label': 'Интересы', 'value': 95, 'color1': AppTheme.gradientPink, 'color2': AppTheme.gradientPink.withAlpha(200)},
+      {'label': 'Стиль общения', 'value': 92, 'color1': AppTheme.gradientPink.withAlpha(200), 'color2': AppTheme.gradientPurple.withAlpha(200)},
+      {'label': 'Жизненные цели', 'value': 88, 'color1': AppTheme.gradientPurple.withAlpha(200), 'color2': AppTheme.gradientPurple},
     ];
 
     return Column(
@@ -275,10 +275,10 @@ class ProfileDetailScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('AI Suggested First Date', style: textTheme.headlineSmall),
+                Text('Первое свидание, предложенное ИИ', style: textTheme.headlineSmall),
                 const SizedBox(height: 4),
                 Text(
-                  'Visit a contemporary art gallery followed by coffee at a cozy café. Perfect for meaningful conversations!',
+                  'Посетите галерею современного искусства, а затем кофе в уютном кафе. Идеально подходит для содержательных разговоров! ',
                   style: textTheme.bodyMedium?.copyWith(color: AppTheme.mutedForeground),
                 ),
               ],

@@ -50,7 +50,7 @@ class LoginScreen extends StatelessWidget {
                   // Поля ввода
                   TextField(
                     decoration: InputDecoration(
-                      hintText: 'Email address',
+                      hintText: 'Email',
                       prefixIcon: Icon(LucideIcons.mail,
                           color: AppTheme.mutedForeground),
                       fillColor: AppTheme.background, // bg-white
@@ -68,7 +68,7 @@ class LoginScreen extends StatelessWidget {
                   const SizedBox(height: 16),
                   TextField(
                     decoration: InputDecoration(
-                      hintText: 'Password',
+                      hintText: 'Пароль',
                       prefixIcon: Icon(LucideIcons.lock,
                           color: AppTheme.mutedForeground),
                       fillColor: AppTheme.background,
@@ -110,7 +110,7 @@ class LoginScreen extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 16.0),
                         child: Text(
-                          'or continue with',
+                          'или войдите с помощью',
                           style: textTheme.bodyMedium
                               ?.copyWith(color: AppTheme.mutedForeground),
                         ),
@@ -154,7 +154,7 @@ class LoginScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "Don't have an account? ",
+                        "У вас нет аккаунта? ",
                         style: textTheme.bodyMedium
                             ?.copyWith(color: AppTheme.mutedForeground),
                       ),
@@ -165,7 +165,7 @@ class LoginScreen extends StatelessWidget {
                           shaderCallback: (bounds) =>
                               AppTheme.primaryGradient.createShader(bounds),
                           child: const Text(
-                            'Sign up',
+                            'Зарегистрироваться',
                             style: TextStyle(
                               color: Colors.white, // Будет заменено градиентом
                               fontWeight: FontWeight.bold,

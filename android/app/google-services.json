@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "701397058783",
+    "project_id": "salfetka-9bb1d",
+    "storage_bucket": "salfetka-9bb1d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:701397058783:android:0047a260c51b84f0d0956a",
+        "android_client_info": {
+          "package_name": "com.example.salfetka5"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAA4e788KHY56iTNFsmzztO7An5NQrtyCI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
