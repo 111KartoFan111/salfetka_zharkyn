@@ -74,7 +74,7 @@ class SwipeCard extends StatelessWidget {
                             shaderCallback: (bounds) =>
                                 AppTheme.primaryGradient.createShader(bounds),
                             child: Text(
-                              '${profile.compatibility}% Match',
+                              '${profile.compatibility}% cовпадения',
                               style: textTheme.bodyMedium?.copyWith(
                                 color: Colors.white, // Заменится градиентом
                                 fontWeight: FontWeight.bold,

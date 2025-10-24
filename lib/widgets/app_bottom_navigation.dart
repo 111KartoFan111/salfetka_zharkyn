@@ -76,7 +76,7 @@ class AppBottomNavigation extends StatelessWidget {
           ),
           _buildNavItem(
             icon: LucideIcons.heart,
-            label: 'Совпадения',
+            label: 'Мэтчи',
             isActive: currentTab == AppScreen.matches,
           ),
           _buildNavItem(
@@ -124,8 +124,6 @@ class AppBottomNavigation extends StatelessWidget {
               label,
               style: TextStyle(
                 fontSize: 12, // text-xs
-                // Цвет будет взят из ShaderMask, если isActive.
-                // Если нет, то будет обычный серый.
                 color: isActive ? Colors.white : Colors.grey[400],
                 fontWeight: isActive ? FontWeight.bold : FontWeight.normal,
               ),

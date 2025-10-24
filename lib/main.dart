@@ -7,7 +7,6 @@ import 'package:soulmatch/theme.dart';
 
 void main() {
   runApp(
-    // Оборачиваем приложение в ChangeNotifierProvider для управления состоянием
     ChangeNotifierProvider(
       create: (context) => AppState(),
       child: const MyApp(),
@@ -23,11 +22,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'SoulMatch',
       theme: AppTheme.lightTheme,
-      // Мы могли бы использовать darkTheme, если бы определили его в theme.dart
-      // darkTheme: AppTheme.darkTheme, 
-      themeMode: ThemeMode.light, // Принудительно светлая тема
+      themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
-      home: AppShell(), // AppShell теперь управляет отображением экранов
+      home: AppShell(),
     );
   }
 }

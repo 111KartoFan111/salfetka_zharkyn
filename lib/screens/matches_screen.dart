@@ -1,4 +1,3 @@
-// lib/screens/matches_screen.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
@@ -13,10 +12,7 @@ class MatchesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
-    // Данные пока возьмем из AppState, как и в SwipeScreen
     final matches = context.watch<AppState>().mockProfiles;
-
-    // TODO: Добавить реальные данные для matches, включая newMatch
     final demoMatches = matches.map((p) => {
       'profile': p,
       'newMatch': p.name == 'Мариям' || p.name == 'Нурдаулет', 
@@ -27,17 +23,16 @@ class MatchesScreen extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(gradient: AppTheme.backgroundGradient),
         child: SafeArea(
-          bottom: false, // Отключаем нижний SafeArea, т.к. есть NavigationBar
+          bottom: false,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Хедер
               Padding(
                 padding: const EdgeInsets.fromLTRB(24.0, 16.0, 24.0, 24.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Matches', style: textTheme.displayMedium),
+                    Text('Мэтчи', style: textTheme.displayMedium),
                     const SizedBox(height: 8),
                     Text(
                       '${demoMatches.length} connections',

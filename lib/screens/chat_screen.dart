@@ -39,9 +39,9 @@ class _ChatScreenState extends State<ChatScreen> {
              // Добавляем сообщение о принятии предложения в чат
              messages.add({
               'id': '${messages.length + 1}',
-              'text': "Sounds like a plan! Let's go to the theater.",
+              'text': "Привет! Мне нравится идея для свидания, которую предложил ИИ. Давай попробуем!",
               'sender': 'me',
-              'time': 'Now' // Примерное время
+              'time': 'только что' // Примерное время
              });
           });
           _scrollToBottom();

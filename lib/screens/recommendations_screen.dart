@@ -1,17 +1,14 @@
-// lib/screens/recommendations_screen.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import 'package:provider/provider.dart';
 import 'package:soulmatch/state/app_state.dart';
 import 'package:soulmatch/theme.dart';
-import 'package:soulmatch/widgets/ui/gradient_button.dart'; // Предполагаем, что создали кастомную кнопку
+import 'package:soulmatch/widgets/ui/gradient_button.dart';
 
 class RecommendationsScreen extends StatelessWidget {
   final Function(UserProfile) onProfileClick;
   const RecommendationsScreen({super.key, required this.onProfileClick});
-
-  // Мок-данные, как в React-компоненте
   final List<Map<String, dynamic>> topMatches = const [
     {
       'id': '1',
@@ -48,7 +45,6 @@ class RecommendationsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
-    // Находим реальные профили по ID (или используем мок-данные напрямую)
     final profiles = context.read<AppState>().mockProfiles;
     final matchProfiles = topMatches.map((matchData) {
        final profile = profiles.firstWhere((p) => p.id == matchData['id'], orElse: () => profiles.first); // Fallback
@@ -64,7 +60,6 @@ class RecommendationsScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Хедер
               Padding(
                 padding: const EdgeInsets.fromLTRB(24.0, 16.0, 24.0, 24.0),
                 child: Column(
@@ -95,7 +90,6 @@ class RecommendationsScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              // Список рекомендаций
               Expanded(
                 child: ListView.builder(
                   padding: const EdgeInsets.fromLTRB(24.0, 0, 24.0, 90.0), // Отступ для навигации
@@ -122,18 +116,16 @@ class RecommendationsScreen extends StatelessWidget {
     return Card(
       elevation: 4,
       margin: const EdgeInsets.only(bottom: 16),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)), // rounded-3xl
-      clipBehavior: Clip.antiAlias, // Для обрезки изображения
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+      clipBehavior: Clip.antiAlias, 
       child: Column(
         children: [
-          // Изображение с оверлеями
           SizedBox(
             height: 256, // h-64
             child: Stack(
               fit: StackFit.expand,
               children: [
                 Image.network(match['image'], fit: BoxFit.cover),
-                // Градиент
                  Container(
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
@@ -143,7 +135,6 @@ class RecommendationsScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                // Ранг
                 Positioned(
                   top: 16,
                   left: 16,
@@ -159,7 +150,6 @@ class RecommendationsScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                // % Match
                  Positioned(
                   top: 16,
                   right: 16,
@@ -194,7 +184,6 @@ class RecommendationsScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                // Инфо внизу
                 Positioned(
                   bottom: 16, left: 16, right: 16,
                   child: Column(
@@ -215,18 +204,17 @@ class RecommendationsScreen extends StatelessWidget {
               ],
             ),
           ),
-          // Контент под фото
           Padding(
-            padding: const EdgeInsets.all(20), // p-5
+            padding: const EdgeInsets.all(20), 
             child: Column(
               children: [
-                // AI Suggestion
+              
                 Container(
-                  padding: const EdgeInsets.all(12), // p-3
+                  padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
                     gradient: const LinearGradient(colors: [AppTheme.pink50, AppTheme.purple50]),
-                    borderRadius: BorderRadius.circular(16), // rounded-2xl
-                    border: Border.all(color: AppTheme.purple50.withAlpha(200)), // border-purple-200
+                    borderRadius: BorderRadius.circular(16), 
+                    border: Border.all(color: AppTheme.purple50.withAlpha(200)),
                   ),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -250,7 +238,6 @@ class RecommendationsScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 16),
-                // Кнопки
                 Row(
                   children: [
                     Expanded(
@@ -265,7 +252,7 @@ class RecommendationsScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(width: 8),
+                    const SizedBox(width: 6),
                     Expanded(
                       child: GradientButton( // Используем кастомную кнопку
                         onPressed: () => onProfileClick(profile),

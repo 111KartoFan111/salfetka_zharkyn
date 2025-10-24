@@ -1,4 +1,3 @@
-// lib/screens/onboarding_screen.dart
 import 'package:flutter/material.dart';
 import 'package:soulmatch/theme.dart';
 import 'package:soulmatch/widgets/neural_logo_widget.dart';

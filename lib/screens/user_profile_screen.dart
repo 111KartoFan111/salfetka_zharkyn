@@ -1,9 +1,7 @@
-// lib/screens/user_profile_screen.dart
 import 'package:flutter/material.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 import 'package:soulmatch/theme.dart';
-import 'package:soulmatch/widgets/ui/gradient_button.dart'; // Предполагаем, что создали
-
+import 'package:soulmatch/widgets/ui/gradient_button.dart'; 
 class UserProfileScreen extends StatelessWidget {
   const UserProfileScreen({super.key});
 
@@ -11,12 +9,6 @@ class UserProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
 
-    // Мок-данные для статистики и интересов
-    const stats = [
-      {'icon': LucideIcons.heart, 'label': 'Matches', 'value': '24'},
-      {'icon': LucideIcons.star, 'label': 'Super Likes', 'value': '8'},
-      {'icon': LucideIcons.messageCircle, 'label': 'Chats', 'value': '12'},
-    ];
     const interests = [
       '🎭 Театр', '☕ Кофе', '📚 Чтение', '🎵 Музыка', '✈️ Путешествия', '🎨 Искусство',
     ];
@@ -30,13 +22,12 @@ class UserProfileScreen extends StatelessWidget {
           bottom: false,
           child: Column(
             children: [
-              // Хедер
               Padding(
                 padding: const EdgeInsets.fromLTRB(24.0, 16.0, 24.0, 24.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('Profile', style: textTheme.displayMedium),
+                    Text('Профиль', style: textTheme.displayMedium),
                     IconButton(
                       icon: const Icon(LucideIcons.settings, color: AppTheme.mutedForeground),
                       onPressed: () {},
@@ -51,9 +42,6 @@ class UserProfileScreen extends StatelessWidget {
                   children: [
                     // Фото и инфо
                     _buildProfileHeader(context),
-                    const SizedBox(height: 24),
-                    // Статистика
-                    _buildStatsGrid(context, stats),
                     const SizedBox(height: 24),
                     // Achievements
                     _buildAchievementsPreview(context, achievementsPreview),
@@ -219,7 +207,7 @@ class UserProfileScreen extends StatelessWidget {
                   children: [
                     const Icon(LucideIcons.trophy, size: 20, color: AppTheme.gradientPurple),
                     const SizedBox(width: 8),
-                    Text('Архив', style: textTheme.headlineSmall),
+                    Text('Достижения', style: textTheme.headlineSmall),
                   ],
                 ),
                 TextButton(
@@ -227,7 +215,7 @@ class UserProfileScreen extends StatelessWidget {
                    style: TextButton.styleFrom(padding: EdgeInsets.zero),
                   child: ShaderMask(
                     shaderCallback: (bounds) => AppTheme.primaryGradient.createShader(bounds),
-                    child: const Text('View All', style: TextStyle(color: Colors.white)),
+                    child: const Text('Посмотреть все', style: TextStyle(color: Colors.white)),
                   ),
                 ),
               ],

@@ -1,4 +1,3 @@
-// lib/screens/swipe_screen.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
@@ -24,7 +23,6 @@ class _SwipeScreenState extends State<SwipeScreen> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    // Получаем профили из AppState
     _profiles = context.watch<AppState>().mockProfiles;
   }
   
@@ -36,8 +34,7 @@ class _SwipeScreenState extends State<SwipeScreen> {
     if (direction == CardSwiperDirection.right && _profiles[previousIndex].name == 'Мариям') {
       widget.onProfileClick(_profiles[previousIndex]);
     }
-    
-    return true; // Важно, чтобы свайп засчитался
+    return true; 
   }
 
   @override
@@ -88,12 +85,12 @@ class _SwipeScreenState extends State<SwipeScreen> {
                           onSwipe: _onSwipe,
                           onEnd: () {
                              setState(() {
-                               _currentIndex = _profiles.length; // Показываем экран "нет профилей"
+                               _currentIndex = _profiles.length;
                              });
                           },
                           numberOfCardsDisplayed: 2,
                           backCardOffset: const Offset(0, 20),
-                          padding: const EdgeInsets.only(bottom: 40), // Отступ для кнопок
+                          padding: const EdgeInsets.only(bottom: 40),
                           cardBuilder: (
                             context,
                             index,
@@ -106,7 +103,6 @@ class _SwipeScreenState extends State<SwipeScreen> {
                 ),
               ),
 
-              // Кнопки управления
               if (_currentIndex < _profiles.length)
                 Padding(
                   padding: const EdgeInsets.only(bottom: 24.0, top: 16.0),
